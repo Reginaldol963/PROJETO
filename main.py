@@ -98,7 +98,6 @@ class InicioHome(QMainWindow, Ui_menu):
 
     def alunos_listar(self):
 
-
         bd = sqlite3.connect("banco/sys_idiomas.db")
         cursor = bd.cursor()
         cursor.execute("SELECT * FROM alunos")
@@ -109,15 +108,7 @@ class InicioHome(QMainWindow, Ui_menu):
 
         for row, text in enumerate(result):
             for column, data in enumerate(text):
-                self.tableWidget.setItem(row,column, QTableWidgetItem(str(data)))
-
-
-
-
-
-
-
-
+                self.tableWidget.setItem(row, column, QTableWidgetItem(str(data)))
 
         """
         cn = sqlite3.connect("banco\sys_idiomas.db")

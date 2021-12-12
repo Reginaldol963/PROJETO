@@ -374,9 +374,10 @@ class Ui_menu(object):
 "	color: rgb(0, 0, 127);\n"
 "}")
         self.tableWidget = QTableWidget(self.pg_listas_alunos)
-        if (self.tableWidget.columnCount() < 7):
-            self.tableWidget.setColumnCount(7)
+        if (self.tableWidget.columnCount() < 8):
+            self.tableWidget.setColumnCount(8)
         __qtablewidgetitem = QTableWidgetItem()
+        __qtablewidgetitem.setFont(font);
         self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
@@ -390,6 +391,8 @@ class Ui_menu(object):
         self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(7, __qtablewidgetitem7)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setGeometry(QRect(30, 110, 701, 471))
         self.label_10 = QLabel(self.pg_listas_alunos)
@@ -407,20 +410,20 @@ class Ui_menu(object):
         self.tableWidget_2 = QTableWidget(self.pg_listas_professores)
         if (self.tableWidget_2.columnCount() < 7):
             self.tableWidget_2.setColumnCount(7)
-        __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(0, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(1, __qtablewidgetitem8)
+        self.tableWidget_2.setHorizontalHeaderItem(0, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(2, __qtablewidgetitem9)
+        self.tableWidget_2.setHorizontalHeaderItem(1, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(3, __qtablewidgetitem10)
+        self.tableWidget_2.setHorizontalHeaderItem(2, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(4, __qtablewidgetitem11)
+        self.tableWidget_2.setHorizontalHeaderItem(3, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(5, __qtablewidgetitem12)
+        self.tableWidget_2.setHorizontalHeaderItem(4, __qtablewidgetitem12)
         __qtablewidgetitem13 = QTableWidgetItem()
-        self.tableWidget_2.setHorizontalHeaderItem(6, __qtablewidgetitem13)
+        self.tableWidget_2.setHorizontalHeaderItem(5, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(6, __qtablewidgetitem14)
         self.tableWidget_2.setObjectName(u"tableWidget_2")
         self.tableWidget_2.setGeometry(QRect(30, 110, 701, 451))
         self.label_11 = QLabel(self.pg_listas_professores)
@@ -477,16 +480,16 @@ class Ui_menu(object):
         self.tableWidget_3 = QTableWidget(self.pg_listas_interessados)
         if (self.tableWidget_3.columnCount() < 5):
             self.tableWidget_3.setColumnCount(5)
-        __qtablewidgetitem14 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(0, __qtablewidgetitem14)
         __qtablewidgetitem15 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(1, __qtablewidgetitem15)
+        self.tableWidget_3.setHorizontalHeaderItem(0, __qtablewidgetitem15)
         __qtablewidgetitem16 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(2, __qtablewidgetitem16)
+        self.tableWidget_3.setHorizontalHeaderItem(1, __qtablewidgetitem16)
         __qtablewidgetitem17 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(3, __qtablewidgetitem17)
+        self.tableWidget_3.setHorizontalHeaderItem(2, __qtablewidgetitem17)
         __qtablewidgetitem18 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(4, __qtablewidgetitem18)
+        self.tableWidget_3.setHorizontalHeaderItem(3, __qtablewidgetitem18)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(4, __qtablewidgetitem19)
         self.tableWidget_3.setObjectName(u"tableWidget_3")
         self.tableWidget_3.setGeometry(QRect(30, 110, 691, 451))
         self.label_9 = QLabel(self.pg_listas_interessados)
@@ -513,18 +516,18 @@ class Ui_menu(object):
         self.tableWidget_4 = QTableWidget(self.pg_listas_funcionarios)
         if (self.tableWidget_4.columnCount() < 6):
             self.tableWidget_4.setColumnCount(6)
-        __qtablewidgetitem19 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(0, __qtablewidgetitem19)
         __qtablewidgetitem20 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(1, __qtablewidgetitem20)
+        self.tableWidget_4.setHorizontalHeaderItem(0, __qtablewidgetitem20)
         __qtablewidgetitem21 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(2, __qtablewidgetitem21)
+        self.tableWidget_4.setHorizontalHeaderItem(1, __qtablewidgetitem21)
         __qtablewidgetitem22 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(3, __qtablewidgetitem22)
+        self.tableWidget_4.setHorizontalHeaderItem(2, __qtablewidgetitem22)
         __qtablewidgetitem23 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(4, __qtablewidgetitem23)
+        self.tableWidget_4.setHorizontalHeaderItem(3, __qtablewidgetitem23)
         __qtablewidgetitem24 = QTableWidgetItem()
-        self.tableWidget_4.setHorizontalHeaderItem(5, __qtablewidgetitem24)
+        self.tableWidget_4.setHorizontalHeaderItem(4, __qtablewidgetitem24)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.tableWidget_4.setHorizontalHeaderItem(5, __qtablewidgetitem25)
         self.tableWidget_4.setObjectName(u"tableWidget_4")
         self.tableWidget_4.setGeometry(QRect(30, 110, 691, 451))
         self.label_14 = QLabel(self.pg_listas_funcionarios)
@@ -762,7 +765,7 @@ class Ui_menu(object):
 
         self.retranslateUi(menu)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(menu)
@@ -787,63 +790,65 @@ class Ui_menu(object):
         self.label.setText(QCoreApplication.translate("menu", u"Bem-vindo(a)!", None))
         self.label_2.setText(QCoreApplication.translate("menu", u"Listas/ alunos", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("menu", u"NOME", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("menu", u"Cod", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("menu", u"CPF", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("menu", u"NOME", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("menu", u"TELEFONE", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("menu", u"CPF", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("menu", u"CURSO", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("menu", u"TELEFONE", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("menu", u"MATRICULA", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("menu", u"CURSO", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("menu", u"SEMESTRE", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("menu", u"MATRICULA", None));
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("menu", u"STATUS", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("menu", u"SEMESTRE", None));
+        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(7)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("menu", u"STATUS", None));
         self.label_10.setText(QCoreApplication.translate("menu", u"Informa\u00e7\u00f5es alunos", None))
-        ___qtablewidgetitem7 = self.tableWidget_2.horizontalHeaderItem(0)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("menu", u"NOME", None));
-        ___qtablewidgetitem8 = self.tableWidget_2.horizontalHeaderItem(1)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("menu", u"CPF", None));
-        ___qtablewidgetitem9 = self.tableWidget_2.horizontalHeaderItem(2)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("menu", u"TELEFONE", None));
-        ___qtablewidgetitem10 = self.tableWidget_2.horizontalHeaderItem(3)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("menu", u"CURSO", None));
-        ___qtablewidgetitem11 = self.tableWidget_2.horizontalHeaderItem(4)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("menu", u"MATRICULA", None));
-        ___qtablewidgetitem12 = self.tableWidget_2.horizontalHeaderItem(5)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("menu", u"QUANT.", None));
-        ___qtablewidgetitem13 = self.tableWidget_2.horizontalHeaderItem(6)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("menu", u"STATUS", None));
+        ___qtablewidgetitem8 = self.tableWidget_2.horizontalHeaderItem(0)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("menu", u"NOME", None));
+        ___qtablewidgetitem9 = self.tableWidget_2.horizontalHeaderItem(1)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("menu", u"CPF", None));
+        ___qtablewidgetitem10 = self.tableWidget_2.horizontalHeaderItem(2)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("menu", u"TELEFONE", None));
+        ___qtablewidgetitem11 = self.tableWidget_2.horizontalHeaderItem(3)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("menu", u"CURSO", None));
+        ___qtablewidgetitem12 = self.tableWidget_2.horizontalHeaderItem(4)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("menu", u"MATRICULA", None));
+        ___qtablewidgetitem13 = self.tableWidget_2.horizontalHeaderItem(5)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("menu", u"QUANT.", None));
+        ___qtablewidgetitem14 = self.tableWidget_2.horizontalHeaderItem(6)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("menu", u"STATUS", None));
         self.label_11.setText(QCoreApplication.translate("menu", u"Informa\u00e7\u00f5es professores", None))
         self.label_3.setText(QCoreApplication.translate("menu", u"Listas/ professores", None))
         self.label_12.setText(QCoreApplication.translate("menu", u"Informa\u00e7\u00f5es de impress\u00e3o", None))
         self.label_4.setText(QCoreApplication.translate("menu", u"Listas/ impress\u00e3o", None))
         self.label_16.setText(QCoreApplication.translate("menu", u"<html><head/><body><p align=\"center\"><span style=\" font-size:19pt;\">Pop-ups de impress\u00e3o</span></p></body></html>", None))
-        ___qtablewidgetitem14 = self.tableWidget_3.horizontalHeaderItem(0)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("menu", u"NOME", None));
-        ___qtablewidgetitem15 = self.tableWidget_3.horizontalHeaderItem(1)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("menu", u"CPF", None));
-        ___qtablewidgetitem16 = self.tableWidget_3.horizontalHeaderItem(2)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("menu", u"TELEFONE", None));
-        ___qtablewidgetitem17 = self.tableWidget_3.horizontalHeaderItem(3)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("menu", u"CURSO", None));
-        ___qtablewidgetitem18 = self.tableWidget_3.horizontalHeaderItem(4)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("menu", u"STATUS", None));
+        ___qtablewidgetitem15 = self.tableWidget_3.horizontalHeaderItem(0)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("menu", u"NOME", None));
+        ___qtablewidgetitem16 = self.tableWidget_3.horizontalHeaderItem(1)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("menu", u"CPF", None));
+        ___qtablewidgetitem17 = self.tableWidget_3.horizontalHeaderItem(2)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("menu", u"TELEFONE", None));
+        ___qtablewidgetitem18 = self.tableWidget_3.horizontalHeaderItem(3)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("menu", u"CURSO", None));
+        ___qtablewidgetitem19 = self.tableWidget_3.horizontalHeaderItem(4)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("menu", u"STATUS", None));
         self.label_9.setText(QCoreApplication.translate("menu", u"Listas/ interessados", None))
         self.label_13.setText(QCoreApplication.translate("menu", u"Informa\u00e7\u00f5es de interessados", None))
-        ___qtablewidgetitem19 = self.tableWidget_4.horizontalHeaderItem(0)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("menu", u"NOME", None));
-        ___qtablewidgetitem20 = self.tableWidget_4.horizontalHeaderItem(1)
-        ___qtablewidgetitem20.setText(QCoreApplication.translate("menu", u"CPF", None));
-        ___qtablewidgetitem21 = self.tableWidget_4.horizontalHeaderItem(2)
-        ___qtablewidgetitem21.setText(QCoreApplication.translate("menu", u"TELEFONE", None));
-        ___qtablewidgetitem22 = self.tableWidget_4.horizontalHeaderItem(3)
-        ___qtablewidgetitem22.setText(QCoreApplication.translate("menu", u"MATRICULA", None));
-        ___qtablewidgetitem23 = self.tableWidget_4.horizontalHeaderItem(4)
-        ___qtablewidgetitem23.setText(QCoreApplication.translate("menu", u"FUN\u00c7\u00c3O", None));
-        ___qtablewidgetitem24 = self.tableWidget_4.horizontalHeaderItem(5)
-        ___qtablewidgetitem24.setText(QCoreApplication.translate("menu", u"CARGO", None));
+        ___qtablewidgetitem20 = self.tableWidget_4.horizontalHeaderItem(0)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("menu", u"NOME", None));
+        ___qtablewidgetitem21 = self.tableWidget_4.horizontalHeaderItem(1)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("menu", u"CPF", None));
+        ___qtablewidgetitem22 = self.tableWidget_4.horizontalHeaderItem(2)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("menu", u"TELEFONE", None));
+        ___qtablewidgetitem23 = self.tableWidget_4.horizontalHeaderItem(3)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("menu", u"MATRICULA", None));
+        ___qtablewidgetitem24 = self.tableWidget_4.horizontalHeaderItem(4)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("menu", u"FUN\u00c7\u00c3O", None));
+        ___qtablewidgetitem25 = self.tableWidget_4.horizontalHeaderItem(5)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("menu", u"CARGO", None));
         self.label_14.setText(QCoreApplication.translate("menu", u"Listas/ funcion\u00e1rios", None))
         self.label_15.setText(QCoreApplication.translate("menu", u"Informa\u00e7\u00f5es funcion\u00e1rios", None))
         self.label_17.setText(QCoreApplication.translate("menu", u"CURSO", None))
