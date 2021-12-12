@@ -21,6 +21,7 @@ class Login(QWidget, Ui_login):
         # Iniciando a tela de login e "validando os campos"
 
     def abrir_sistema(self):
+
         if self.txt_senha.text() == "123" and self.txt_usuario.text() == 'admin':
             self.w = InicioHome()
             self.w.show()
@@ -62,6 +63,14 @@ class InicioHome(QMainWindow, Ui_menu):
         # Cadastrar aluno
         self.btn_cadastrar_aluno.clicked.connect(self.aluno_cadastrar)
 
+    def limparCampos_AlunosCadastrar(self):
+        view_nome = self.stackedWidget.setCurrentWidget(self.txt_nome.setText(''))
+        view_cpf = self.stackedWidget.setCurrentWidget(self.txt_cpf.setText(''))
+        view_telefone = self.stackedWidget.setCurrentWidget(self.txt_telefone.setText(''))
+        view_curso = self.stackedWidget.setCurrentWidget(self.cb_curso.setText(''))
+        view_email = self.stackedWidget.setCurrentWidget(self.txt_email.setText(''))
+        view_semestre = self.stackedWidget.setCurrentWidget(self.cb_semestre.setText(''))
+
     def aluno_cadastrar(self):
         # pegando os dados da Tela de Cadastro
         sql = Model_db()
@@ -77,18 +86,15 @@ class InicioHome(QMainWindow, Ui_menu):
         if view_nome == "" or view_cpf == "" or view_telefone == "" or view_email == "" or view_cb_curso == "" or view_cb_semestre == "":
             QMessageBox.Information(QMessageBox(), "Preencha todos so compos")
         else:
-            sql.aluno_novo(
-                "INSERT INTO alunos (nome, cpf, telefone, curso, matricula, semestre, status) VALUES ('{}', '{}', '{}', '{}', 2603-5, 2009.2, 'Concluído')".format(
-                    view_nome, view_cpf, view_cb_curso, view_telefone, view_email, view_cb_semestre))
-            QMessageBox.Information(QMessageBox(), "Aluno inserido com sucesso!")
+            sql.criar_apagar_atualizar(
+                "INSERT INTO alunos (nome,    cpf,       telefone,   curso, email, semestre) VALUES ('{}', '{}', '{}', '{}', '{}', '{}')".format(
+                                  view_nome, view_cpf,  view_telefone, view_cb_curso, view_email, view_cb_semestre))
+            # QMessageBox.about(self, "Sucesso", "Aluno Inserido com sucesso")
 
-    def limparCampos_AlunosCadastrar(self):
-        view_nome = self.stackedWidget.setCurrentWidget(self.txt_nome.setText(''))
-        view_cpf = self.stackedWidget.setCurrentWidget(self.txt_cpf.setText(''))
-        view_telefone = self.stackedWidget.setCurrentWidget(self.txt_telefone.setText(''))
-        view_curso = self.stackedWidget.setCurrentWidget(self.cb_curso.setText(''))
-        view_email = self.stackedWidget.setCurrentWidget(self.txt_email.setText(''))
-        view_semestre = self.stackedWidget.setCurrentWidget(self.cb_semestre.setText(''))
+    def alunos_listar(self):
+        db = Model_db()
+        listar = db.listar_dados("SELECT * FROM alunos")
+        print(listar)
 
 
 if __name__ == '__main__':
