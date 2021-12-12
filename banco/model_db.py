@@ -37,6 +37,20 @@ class Model_db():
                            DEFAULT Matriculado
                            ); """)
 
+    def professores_tbl_create(self):
+        cur = self.cursor
+        cur.execute("""
+       CREATE TABLE IF NOT EXISTS professores (
+            id INTEGER PRIMARY KEY NOT NULL, 
+            nome TEXT (100) NOT NULL, 
+            cpf INTEGER (11) NOT NULL, 
+            telefone INTEGER (11) NOT NULL, 
+            cuso TEXT (100) NOT NULL, 
+            matricula INTEGER (6) UNIQUE NOT NULL, 
+            quant INTEGER (2) NOT NULL, 
+            status TEXT (100) NOT NULL);
+        """)
+
     def criar_apagar_atualizar(self, sql):
         cur = self.cursor
         cur.execute(sql)
@@ -50,3 +64,4 @@ class Model_db():
 
 db = Model_db()
 db.aluno_tbl_create()
+db.professores_tbl_create()

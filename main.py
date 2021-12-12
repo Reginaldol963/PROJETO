@@ -67,6 +67,7 @@ class InicioHome(QMainWindow, Ui_menu):
         self.btn_cadastrar_aluno.clicked.connect(self.aluno_cadastrar)
 
         self.alunos_listar()
+        self.professores_listar()
 
     def limparCampos_AlunosCadastrar(self):
         view_nome = self.stackedWidget.setCurrentWidget(self.txt_nome.setText(''))
@@ -110,6 +111,19 @@ class InicioHome(QMainWindow, Ui_menu):
             for column, data in enumerate(text):
                 self.tableWidget.setItem(row, column, QTableWidgetItem(str(data)))
 
+    def professores_listar(self):
+
+        bd = sqlite3.connect("banco/sys_idiomas.db")
+        cursor = bd.cursor()
+        cursor.execute("SELECT * FROM professores")
+        result = cursor.fetchall()
+
+        self.tableWidget_2.clearContents()
+        self.tableWidget_2.setRowCount(len(result))
+
+        for row, text in enumerate(result):
+            for column, data in enumerate(text):
+                self.tableWidget_2.setItem(row, column, QTableWidgetItem(str(data)))
         """
         cn = sqlite3.connect("banco\sys_idiomas.db")
         result = pd.read_sql_query("SELECT * FROM alunos", cn)

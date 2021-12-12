@@ -700,7 +700,7 @@ QPushButton:pressed {
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="pg_home">
        <widget class="QLabel" name="label">
@@ -836,6 +836,11 @@ QPushButton:pressed {
         </property>
         <column>
          <property name="text">
+          <string>New Column</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
           <string>NOME</string>
          </property>
         </column>
@@ -851,7 +856,7 @@ QPushButton:pressed {
         </column>
         <column>
          <property name="text">
-          <string>CURSO</string>
+          <string>COD</string>
          </property>
         </column>
         <column>
