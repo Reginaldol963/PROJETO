@@ -51,6 +51,21 @@ class Model_db():
             status TEXT (100) NOT NULL);
         """)
 
+    def funcionarios_tbl_create(self):
+
+        cur = self.cursor
+        cur.execute("""
+             CREATE TABLE IF NOT EXISTS funcionarios (
+                  id INTEGER PRIMARY KEY NOT NULL, 
+                  nome TEXT (100) NOT NULL, 
+                  cpf INTEGER (11) NOT NULL, 
+                  telefone INTEGER (11) NOT NULL, 
+                  cuso TEXT (100) NOT NULL, 
+                  matricula INTEGER (6) UNIQUE NOT NULL, 
+                  quant INTEGER (2) NOT NULL, 
+                  status TEXT (100) NOT NULL);
+              """)
+
     def criar_apagar_atualizar(self, sql):
         cur = self.cursor
         cur.execute(sql)

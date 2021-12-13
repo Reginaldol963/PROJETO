@@ -700,7 +700,7 @@ QPushButton:pressed {
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="pg_home">
        <widget class="QLabel" name="label">
@@ -836,7 +836,7 @@ QPushButton:pressed {
         </property>
         <column>
          <property name="text">
-          <string>New Column</string>
+          <string>COD</string>
          </property>
         </column>
         <column>
@@ -995,12 +995,12 @@ QPushButton:pressed {
         </property>
         <column>
          <property name="text">
-          <string>NOME</string>
+          <string>COD</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>CPF</string>
+          <string>NOME</string>
          </property>
         </column>
         <column>
@@ -1072,6 +1072,11 @@ QPushButton:pressed {
           <height>451</height>
          </rect>
         </property>
+        <column>
+         <property name="text">
+          <string>COD</string>
+         </property>
+        </column>
         <column>
          <property name="text">
           <string>NOME</string>
@@ -1503,22 +1508,22 @@ QPushButton:pressed {
         </property>
         <item>
          <property name="text">
-          <string>Inglês</string>
+          <string>2021.1</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Espanhol</string>
+          <string>2021.2</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Francês</string>
+          <string>2022.1</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Alemão</string>
+          <string>2022.2</string>
          </property>
         </item>
        </widget>

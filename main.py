@@ -68,6 +68,8 @@ class InicioHome(QMainWindow, Ui_menu):
 
         self.alunos_listar()
         self.professores_listar()
+        self.funcionarios_listar()
+        self.interessados_listar()
 
     def limparCampos_AlunosCadastrar(self):
         view_nome = self.stackedWidget.setCurrentWidget(self.txt_nome.setText(''))
@@ -124,6 +126,22 @@ class InicioHome(QMainWindow, Ui_menu):
         for row, text in enumerate(result):
             for column, data in enumerate(text):
                 self.tableWidget_2.setItem(row, column, QTableWidgetItem(str(data)))
+
+    def funcionarios_listar(self):
+
+        bd = sqlite3.connect("banco/sys_idiomas.db")
+        cursor = bd.cursor()
+        cursor.execute("SELECT * FROM funcionarios")
+        result = cursor.fetchall()
+
+        self.tableWidget_4.clearContents()
+        self.tableWidget_4.setRowCount(len(result))
+
+        for row, text in enumerate(result):
+            for column, data in enumerate(text):
+                self.tableWidget_4.setItem(row, column, QTableWidgetItem(str(data)))
+
+
         """
         cn = sqlite3.connect("banco\sys_idiomas.db")
         result = pd.read_sql_query("SELECT * FROM alunos", cn)
@@ -150,6 +168,20 @@ class InicioHome(QMainWindow, Ui_menu):
         lista = db.listar_dados("SELECT * FROM alunos")
 
         self.stackedWidget.setCurrentWidget(self.pg_listas_alunos)"""
+
+    def interessados_listar(self):
+
+        bd = sqlite3.connect("banco/sys_idiomas.db")
+        cursor = bd.cursor()
+        cursor.execute("SELECT * FROM alunos")
+        result = cursor.fetchall()
+
+        self.tableWidget_3.clearContents()
+        self.tableWidget_3.setRowCount(len(result))
+
+        for row, text in enumerate(result):
+            for column, data in enumerate(text):
+                self.tableWidget_3.setItem(row, column, QTableWidgetItem(str(data)))
 
 
 if __name__ == '__main__':
