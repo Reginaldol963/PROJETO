@@ -769,7 +769,7 @@ class Ui_menu(object):
 
         self.retranslateUi(menu)
 
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(6)
 
 
         QMetaObject.connectSlotsByName(menu)
@@ -873,10 +873,10 @@ class Ui_menu(object):
 
         self.label_5.setText(QCoreApplication.translate("menu", u"Cadastro > alunos", None))
         self.label_21.setText(QCoreApplication.translate("menu", u"TELEFONE", None))
-        self.cb_semestre.setItemText(0, QCoreApplication.translate("menu", u"Ingl\u00eas", None))
-        self.cb_semestre.setItemText(1, QCoreApplication.translate("menu", u"Espanhol", None))
-        self.cb_semestre.setItemText(2, QCoreApplication.translate("menu", u"Franc\u00eas", None))
-        self.cb_semestre.setItemText(3, QCoreApplication.translate("menu", u"Alem\u00e3o", None))
+        self.cb_semestre.setItemText(0, QCoreApplication.translate("menu", u"2021.1", None))
+        self.cb_semestre.setItemText(1, QCoreApplication.translate("menu", u"2021.2", None))
+        self.cb_semestre.setItemText(2, QCoreApplication.translate("menu", u"2022.1", None))
+        self.cb_semestre.setItemText(3, QCoreApplication.translate("menu", u"2022.2", None))
 
     # retranslateUi
 
